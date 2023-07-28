@@ -22,6 +22,9 @@ kind: Ingress
 metadata:
   name: skiapp-ingress-nginx-2
   namespace: team-riker
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
