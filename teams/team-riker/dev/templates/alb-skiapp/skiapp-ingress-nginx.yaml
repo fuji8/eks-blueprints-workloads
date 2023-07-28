@@ -25,10 +25,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: hoge.hoge
+    - host:
       http:
         paths:
-          - path: /
+          - path: /a
             pathType: Prefix
             backend:
               service:
