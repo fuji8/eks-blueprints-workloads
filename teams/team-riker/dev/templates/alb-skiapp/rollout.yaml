@@ -19,6 +19,9 @@ spec:
       containers:
       - name: skiapp
         image: sharepointoscar/skiapp:v1
+        env:
+          - name: CLUSTER_NAME
+            value: {{.Values.spec.clusterName}}
         imagePullPolicy: Always
         ports:
         - name: http
